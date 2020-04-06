@@ -7,7 +7,7 @@ evgeny_vlasov@yahoo.com
 
 + stack for python backend dev
 1) Unit testing (pytest / unittest) + go test
-
+2) How to create python packages (docs, confs, setup.py + README.md)
 
 GitRepo: https://github.com/vlasove/Flask2_course
 
