@@ -17,8 +17,14 @@ evgeny_vlasov@yahoo.com
 
 GitRepo: https://github.com/vlasove/Flask2_course
 
-+ 5-6 pet-projects examples
+Pet Projects ideas:
 
++ Blog App
++ TO-DO App
++ News Portal
++ SPA (single page app) for Portfolio
++ Telegram/Facebook chatbot
++ Weather App + Mobile Client (Flask API + React Native)
 
 10:00 - 11:30
 
