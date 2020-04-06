@@ -1,0 +1,21 @@
+<html>
+    <head>
+        {% if title %}
+            <title>{{ title }} - Blog App </title>
+        {% else %}
+            <title>Blog App</title>
+        {% endif %}
+    </head>
+    <body>
+        <div> Blog : 
+            <a href="{{ url_for('home') }}">Home </a>
+            |
+            <a href ="{{ url_for('about') }}">About</a>
+            |
+            <a href ="{{ url_for('login') }}">LogIn</a>
+            <hr>
+            {% block content %}
+            {% endblock content %}
+        </div>
+    </body>
+</html>
