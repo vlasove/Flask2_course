@@ -6,12 +6,13 @@ evgeny_vlasov@yahoo.com
 
 
 + stack for python backend dev
-0) Python syntax (list comprehension, map, class Meta, super(), __repr__, __str__, __name__, setup.py)
+0) Python syntax (list comprehension, map, class Meta, super(), __repr__, __str__, __name__, setup.py, множественное наследование)
 1) Unit testing (pytest / unittest) + go test
 2) How to create python packages (docs, confs, setup.py + README.md)
 3) SQL syntax
 3.1) СУБД ---> MySQL|PostgreSQL + NoSql(MongoDB)
 4) ORM sqlalchemy (python) + gorm (golang)
+
 
 #ORM - Object Relational Mapping 
 
