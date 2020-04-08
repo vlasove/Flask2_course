@@ -90,6 +90,10 @@ def logout():
 @app.route('/user/<username>', methods=['GET'])
 @login_required
 def user(username):
+    # store = Store.query.filter_by(inn = store_inn).first_or_404()
+    # books = Book.query.filter_by(store_id = store.id)
+    # books.sort(key=lambda x: x.bookname)
+    # return render_template(.....)
     user = User.query.filter_by(username=username).first_or_404()
     posts = [
         {'author' : user, 'body': 'Test body 1'},
@@ -116,4 +120,16 @@ def edit():
         form.about_me.data = current_user.about_me
     return render_template('edit_user.html', form=form)
     
+
+
+
+# @app.route('/store/<store_inn>', methods=['GET'])
+# def store(store_inn):
+#     store = Store.query.filter_by(inn = store_inn).first_or_404()
+#     books = Book.query.filter_by(store_id = store.id)
+#     if len(books) == 0:
+#         books = None
+#     else: 
+#         books.sort(key=lambda x: x.bookname)
+#     return render_template('store_info.html', books=books, store=store)
 
