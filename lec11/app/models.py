@@ -20,7 +20,7 @@ class User(UserMixin , db.Model):
 
     def avatar(self, size):
         nums = md5(self.email.lower().encode('utf-8')).hexdigest()
-        return 'https://s.gravatar.com/avatar/{}?d=identicons&s={}'.format(nums, size)
+        return 'https://www.gravatar.com/avatar/{}?d=identicon&s={}'.format(nums, size)
 
     def set_password(self, password):
         self.password_hash = generate_password_hash(password) 
