@@ -1,0 +1,193 @@
+2020-04-09 12:22:35,893 INFO :Blog Logs File [in C:\Users\evgen\Desktop\course\lec13\app\__init__.py:35]
+2020-04-09 12:23:15,056 INFO :Blog Logs File [in C:\Users\evgen\Desktop\course\lec13\app\__init__.py:35]
+2020-04-09 12:23:35,852 ERROR :Exception on /edit [POST] [in C:\Users\evgen\.virtualenvs\lec13-ZOzopy23\lib\site-packages\flask\app.py:1891]
+Traceback (most recent call last):
+  File "C:\Users\evgen\.virtualenvs\lec13-ZOzopy23\lib\site-packages\sqlalchemy\engine\base.py", line 1247, in _execute_context
+    self.dialect.do_execute(
+  File "C:\Users\evgen\.virtualenvs\lec13-ZOzopy23\lib\site-packages\sqlalchemy\engine\default.py", line 590, in do_execute
+    cursor.execute(statement, parameters)
+sqlite3.IntegrityError: UNIQUE constraint failed: user.username
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\evgen\.virtualenvs\lec13-ZOzopy23\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\evgen\.virtualenvs\lec13-ZOzopy23\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\evgen\.virtualenvs\lec13-ZOzopy23\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\evgen\.virtualenvs\lec13-ZOzopy23\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "C:\Users\evgen\.virtualenvs\lec13-ZOzopy23\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\evgen\.virtualenvs\lec13-ZOzopy23\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\evgen\.virtualenvs\lec13-ZOzopy23\lib\site-packages\flask_login\utils.py", line 272, in decorated_view
+    return func(*args, **kwargs)
+  File "C:\Users\evgen\Desktop\course\lec13\app\routes.py", line 115, in edit
+    db.session.commit()
+  File "C:\Users\evgen\.virtualenvs\lec13-ZOzopy23\lib\site-packages\sqlalchemy\orm\scoping.py", line 162, in do
+    return getattr(self.registry(), name)(*args, **kwargs)
+  File "C:\Users\evgen\.virtualenvs\lec13-ZOzopy23\lib\site-packages\sqlalchemy\orm\session.py", line 1036, in commit
+    self.transaction.commit()
+  File "C:\Users\evgen\.virtualenvs\lec13-ZOzopy23\lib\site-packages\sqlalchemy\orm\session.py", line 503, in commit
+    self._prepare_impl()
+  File "C:\Users\evgen\.virtualenvs\lec13-ZOzopy23\lib\site-packages\sqlalchemy\orm\session.py", line 482, in _prepare_impl
+    self.session.flush()
+  File "C:\Users\evgen\.virtualenvs\lec13-ZOzopy23\lib\site-packages\sqlalchemy\orm\session.py", line 2496, in flush
+    self._flush(objects)
+  File "C:\Users\evgen\.virtualenvs\lec13-ZOzopy23\lib\site-packages\sqlalchemy\orm\session.py", line 2637, in _flush
+    transaction.rollback(_capture_exception=True)
+  File "C:\Users\evgen\.virtualenvs\lec13-ZOzopy23\lib\site-packages\sqlalchemy\util\langhelpers.py", line 68, in __exit__
+    compat.raise_(
+  File "C:\Users\evgen\.virtualenvs\lec13-ZOzopy23\lib\site-packages\sqlalchemy\util\compat.py", line 178, in raise_
+    raise exception
+  File "C:\Users\evgen\.virtualenvs\lec13-ZOzopy23\lib\site-packages\sqlalchemy\orm\session.py", line 2597, in _flush
+    flush_context.execute()
+  File "C:\Users\evgen\.virtualenvs\lec13-ZOzopy23\lib\site-packages\sqlalchemy\orm\unitofwork.py", line 422, in execute
+    rec.execute(self)
+  File "C:\Users\evgen\.virtualenvs\lec13-ZOzopy23\lib\site-packages\sqlalchemy\orm\unitofwork.py", line 586, in execute
+    persistence.save_obj(
+  File "C:\Users\evgen\.virtualenvs\lec13-ZOzopy23\lib\site-packages\sqlalchemy\orm\persistence.py", line 230, in save_obj
+    _emit_update_statements(
+  File "C:\Users\evgen\.virtualenvs\lec13-ZOzopy23\lib\site-packages\sqlalchemy\orm\persistence.py", line 994, in _emit_update_statements
+    c = cached_connections[connection].execute(
+  File "C:\Users\evgen\.virtualenvs\lec13-ZOzopy23\lib\site-packages\sqlalchemy\engine\base.py", line 984, in execute
+    return meth(self, multiparams, params)
+  File "C:\Users\evgen\.virtualenvs\lec13-ZOzopy23\lib\site-packages\sqlalchemy\sql\elements.py", line 293, in _execute_on_connection
+    return connection._execute_clauseelement(self, multiparams, params)
+  File "C:\Users\evgen\.virtualenvs\lec13-ZOzopy23\lib\site-packages\sqlalchemy\engine\base.py", line 1097, in _execute_clauseelement
+    ret = self._execute_context(
+  File "C:\Users\evgen\.virtualenvs\lec13-ZOzopy23\lib\site-packages\sqlalchemy\engine\base.py", line 1287, in _execute_context
+    self._handle_dbapi_exception(
+  File "C:\Users\evgen\.virtualenvs\lec13-ZOzopy23\lib\site-packages\sqlalchemy\engine\base.py", line 1481, in _handle_dbapi_exception
+    util.raise_(
+  File "C:\Users\evgen\.virtualenvs\lec13-ZOzopy23\lib\site-packages\sqlalchemy\util\compat.py", line 178, in raise_
+    raise exception
+  File "C:\Users\evgen\.virtualenvs\lec13-ZOzopy23\lib\site-packages\sqlalchemy\engine\base.py", line 1247, in _execute_context
+    self.dialect.do_execute(
+  File "C:\Users\evgen\.virtualenvs\lec13-ZOzopy23\lib\site-packages\sqlalchemy\engine\default.py", line 590, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.IntegrityError: (sqlite3.IntegrityError) UNIQUE constraint failed: user.username
+[SQL: UPDATE user SET username=?, about_me=? WHERE user.id = ?]
+[parameters: ('bobby2', 'Test for info editor2', 1)]
+(Background on this error at: http://sqlalche.me/e/gkpj)
+2020-04-09 12:41:45,671 INFO :Blog Logs File [in C:\Users\evgen\Desktop\course\lec13\app\__init__.py:35]
+2020-04-09 12:49:21,020 INFO :Blog Logs File [in C:\Users\evgen\Desktop\course\lec13\app\__init__.py:35]
+2020-04-09 12:49:24,368 ERROR :Exception on /edit [GET] [in C:\Users\evgen\.virtualenvs\lec13-ZOzopy23\lib\site-packages\flask\app.py:1891]
+Traceback (most recent call last):
+  File "C:\Users\evgen\.virtualenvs\lec13-ZOzopy23\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\evgen\.virtualenvs\lec13-ZOzopy23\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\evgen\.virtualenvs\lec13-ZOzopy23\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\evgen\.virtualenvs\lec13-ZOzopy23\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "C:\Users\evgen\.virtualenvs\lec13-ZOzopy23\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\evgen\.virtualenvs\lec13-ZOzopy23\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\evgen\.virtualenvs\lec13-ZOzopy23\lib\site-packages\flask_login\utils.py", line 272, in decorated_view
+    return func(*args, **kwargs)
+  File "C:\Users\evgen\Desktop\course\lec13\app\routes.py", line 121, in edit
+    return render_template('edit_user.html', form=form)
+  File "C:\Users\evgen\.virtualenvs\lec13-ZOzopy23\lib\site-packages\flask\templating.py", line 137, in render_template
+    return _render(
+  File "C:\Users\evgen\.virtualenvs\lec13-ZOzopy23\lib\site-packages\flask\templating.py", line 120, in _render
+    rv = template.render(context)
+  File "C:\Users\evgen\.virtualenvs\lec13-ZOzopy23\lib\site-packages\jinja2\environment.py", line 1090, in render
+    self.environment.handle_exception()
+  File "C:\Users\evgen\.virtualenvs\lec13-ZOzopy23\lib\site-packages\jinja2\environment.py", line 832, in handle_exception
+    reraise(*rewrite_traceback_stack(source=source))
+  File "C:\Users\evgen\.virtualenvs\lec13-ZOzopy23\lib\site-packages\jinja2\_compat.py", line 28, in reraise
+    raise value.with_traceback(tb)
+  File "C:\Users\evgen\Desktop\course\lec13\app\templates\edit_user.html", line 1, in top-level template code
+    {% extends 'base.html' %}
+  File "C:\Users\evgen\Desktop\course\lec13\app\templates\base.html", line 37, in top-level template code
+    {% block content %}
+  File "C:\Users\evgen\Desktop\course\lec13\app\templates\edit_user.html", line 6, in block "content"
+    {{ form.hidden_tag() }}
+  File "C:\Users\evgen\.virtualenvs\lec13-ZOzopy23\lib\site-packages\flask_wtf\form.py", line 134, in hidden_tag
+    u'\n'.join(text_type(f) for f in hidden_fields(fields or self))
+  File "C:\Users\evgen\.virtualenvs\lec13-ZOzopy23\lib\site-packages\flask_wtf\form.py", line 134, in <genexpr>
+    u'\n'.join(text_type(f) for f in hidden_fields(fields or self))
+  File "C:\Users\evgen\.virtualenvs\lec13-ZOzopy23\lib\site-packages\flask_wtf\form.py", line 124, in hidden_fields
+    for f in fields:
+  File "C:\Users\evgen\.virtualenvs\lec13-ZOzopy23\lib\site-packages\wtforms\form.py", line 57, in __iter__
+    return iter(itervalues(self._fields))
+AttributeError: 'EditUserInfoForm' object has no attribute '_fields'
+2020-04-09 12:49:31,435 ERROR :Exception on /edit [GET] [in C:\Users\evgen\.virtualenvs\lec13-ZOzopy23\lib\site-packages\flask\app.py:1891]
+Traceback (most recent call last):
+  File "C:\Users\evgen\.virtualenvs\lec13-ZOzopy23\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\evgen\.virtualenvs\lec13-ZOzopy23\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\evgen\.virtualenvs\lec13-ZOzopy23\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\evgen\.virtualenvs\lec13-ZOzopy23\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "C:\Users\evgen\.virtualenvs\lec13-ZOzopy23\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\evgen\.virtualenvs\lec13-ZOzopy23\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\evgen\.virtualenvs\lec13-ZOzopy23\lib\site-packages\flask_login\utils.py", line 272, in decorated_view
+    return func(*args, **kwargs)
+  File "C:\Users\evgen\Desktop\course\lec13\app\routes.py", line 121, in edit
+    return render_template('edit_user.html', form=form)
+  File "C:\Users\evgen\.virtualenvs\lec13-ZOzopy23\lib\site-packages\flask\templating.py", line 137, in render_template
+    return _render(
+  File "C:\Users\evgen\.virtualenvs\lec13-ZOzopy23\lib\site-packages\flask\templating.py", line 120, in _render
+    rv = template.render(context)
+  File "C:\Users\evgen\.virtualenvs\lec13-ZOzopy23\lib\site-packages\jinja2\environment.py", line 1090, in render
+    self.environment.handle_exception()
+  File "C:\Users\evgen\.virtualenvs\lec13-ZOzopy23\lib\site-packages\jinja2\environment.py", line 832, in handle_exception
+    reraise(*rewrite_traceback_stack(source=source))
+  File "C:\Users\evgen\.virtualenvs\lec13-ZOzopy23\lib\site-packages\jinja2\_compat.py", line 28, in reraise
+    raise value.with_traceback(tb)
+  File "C:\Users\evgen\Desktop\course\lec13\app\templates\edit_user.html", line 1, in top-level template code
+    {% extends 'base.html' %}
+  File "C:\Users\evgen\Desktop\course\lec13\app\templates\base.html", line 37, in top-level template code
+    {% block content %}
+  File "C:\Users\evgen\Desktop\course\lec13\app\templates\edit_user.html", line 6, in block "content"
+    {{ form.hidden_tag() }}
+  File "C:\Users\evgen\.virtualenvs\lec13-ZOzopy23\lib\site-packages\flask_wtf\form.py", line 134, in hidden_tag
+    u'\n'.join(text_type(f) for f in hidden_fields(fields or self))
+  File "C:\Users\evgen\.virtualenvs\lec13-ZOzopy23\lib\site-packages\flask_wtf\form.py", line 134, in <genexpr>
+    u'\n'.join(text_type(f) for f in hidden_fields(fields or self))
+  File "C:\Users\evgen\.virtualenvs\lec13-ZOzopy23\lib\site-packages\flask_wtf\form.py", line 124, in hidden_fields
+    for f in fields:
+  File "C:\Users\evgen\.virtualenvs\lec13-ZOzopy23\lib\site-packages\wtforms\form.py", line 57, in __iter__
+    return iter(itervalues(self._fields))
+AttributeError: 'EditUserInfoForm' object has no attribute '_fields'
+2020-04-09 12:50:07,612 INFO :Blog Logs File [in C:\Users\evgen\Desktop\course\lec13\app\__init__.py:35]
+2020-04-09 14:12:40,329 INFO :Blog Logs File [in C:\Users\evgen\Desktop\course\lec14\app\__init__.py:35]
+2020-04-09 14:13:03,046 INFO :Blog Logs File [in C:\Users\evgen\Desktop\course\lec14\app\__init__.py:35]
+2020-04-09 14:13:09,823 INFO :Blog Logs File [in C:\Users\evgen\Desktop\course\lec14\app\__init__.py:35]
+2020-04-09 14:14:43,383 INFO :Blog Logs File [in C:\Users\evgen\Desktop\course\lec14\app\__init__.py:35]
+2020-04-09 14:40:52,701 INFO :Blog Logs File [in C:\Users\evgen\Desktop\course\lec15\app\__init__.py:35]
+2020-04-09 15:16:22,398 INFO :Blog Logs File [in C:\Users\evgen\Desktop\course\lec15\app\__init__.py:35]
+2020-04-09 15:16:56,383 INFO :Blog Logs File [in C:\Users\evgen\Desktop\course\lec15\app\__init__.py:35]
+2020-04-09 15:18:24,278 INFO :Blog Logs File [in C:\Users\evgen\Desktop\course\lec15\app\__init__.py:35]
+2020-04-09 15:19:12,232 INFO :Blog Logs File [in C:\Users\evgen\Desktop\course\lec15\app\__init__.py:35]
+2020-04-09 15:20:24,988 INFO :Blog Logs File [in C:\Users\evgen\Desktop\course\lec15\app\__init__.py:35]
+2020-04-09 15:38:32,560 INFO :Blog Logs File [in C:\Users\evgen\Desktop\course\lec15\app\__init__.py:35]
+2020-04-09 15:43:16,529 INFO :Blog Logs File [in C:\Users\evgen\Desktop\course\lec15\app\__init__.py:35]
+2020-04-09 15:44:44,280 INFO :Blog Logs File [in C:\Users\evgen\Desktop\course\lec15\app\__init__.py:35]
+2020-04-09 15:45:10,834 INFO :Blog Logs File [in C:\Users\evgen\Desktop\course\lec15\app\__init__.py:35]
+2020-04-09 15:45:49,754 INFO :Blog Logs File [in C:\Users\evgen\Desktop\course\lec15\app\__init__.py:35]
+2020-04-09 15:47:00,674 INFO :Blog Logs File [in C:\Users\evgen\Desktop\course\lec15\app\__init__.py:35]
+2020-04-09 15:47:28,298 INFO :Blog Logs File [in C:\Users\evgen\Desktop\course\lec15\app\__init__.py:35]
+2020-04-09 15:47:59,940 INFO :Blog Logs File [in C:\Users\evgen\Desktop\course\lec15\app\__init__.py:35]
+2020-04-09 15:50:44,935 INFO :Blog Logs File [in C:\Users\evgen\Desktop\course\lec15\app\__init__.py:35]
+2020-04-09 15:56:53,384 INFO :Blog Logs File [in C:\Users\evgen\Desktop\course\lec15\app\__init__.py:35]
+2020-04-09 15:58:07,227 INFO :Blog Logs File [in C:\Users\evgen\Desktop\course\lec15\app\__init__.py:35]
+2020-04-09 16:00:59,631 INFO :Blog Logs File [in C:\Users\evgen\Desktop\course\lec15\app\__init__.py:35]
+2020-04-09 16:02:11,594 INFO :Blog Logs File [in C:\Users\evgen\Desktop\course\lec15\app\__init__.py:35]
+2020-04-09 16:06:20,260 INFO :Blog Logs File [in C:\Users\evgen\Desktop\course\lec15\app\__init__.py:35]
+2020-04-09 16:06:58,144 INFO :Blog Logs File [in C:\Users\evgen\Desktop\course\lec15\app\__init__.py:35]
+2020-04-09 16:07:46,825 INFO :Blog Logs File [in C:\Users\evgen\Desktop\course\lec15\app\__init__.py:35]
+2020-04-09 16:08:21,220 INFO :Blog Logs File [in C:\Users\evgen\Desktop\course\lec15\app\__init__.py:35]
+2020-04-09 16:09:44,449 INFO :Blog Logs File [in C:\Users\evgen\Desktop\course\lec15\app\__init__.py:35]
+2020-04-09 16:10:55,164 INFO :Blog Logs File [in C:\Users\evgen\Desktop\course\lec15\app\__init__.py:35]
