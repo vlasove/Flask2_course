@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <table>
+        <tr valign="top">
+            <td>
+                <h1>Store: {{ store.inn }}</h1>
+                <h2>Email: {{ store.email }}</h2>
+                {% if store.about_store %}
+                    <p>About: {{ store.about_store }}</p>
+                {% endif %}
+
+                {% if store.last_seen %}
+                    <p>Last seen:  {{ store.last_seen }} </p>
+                {% endif %}
+
+                {% if store == current_user %}
+                    <p><a href="{{ url_for('edit')}}">Edit your Profile info</a> </p>
+                {% endif %}
+            </td>
+
+            
+
+        </tr>
+    </table>
+    <hr>
+    {% for book in books %}
+    <table>
+        <tr valign="top">
+            <td>{{book.store.inn}} has: <b>{{book.author }} {{ book.title }}</b></td>
+        </tr>
+    </table>
+    {% endfor %}
+{% endblock %}
