@@ -35,6 +35,15 @@ class User(UserMixin , db.Model):
         secondaryjoin=(followers.c.follows_id == id),
         backref=db.backref('followers', lazy='dynamic'), lazy ='dynamic')
 
+    def followed_posts(self):
+        followed_by_user =  Post.query.join(
+            followers, (followers.c.follows_id == Post.user_id)).filter(
+                followers.c.follower_id == self.id)
+        own_posts = Post.query.filter_by(user_id=self.id)
+
+        return followed_by_user.union(own_posts).order_by(Post.timestamp.desc())
+
+        
 
     def follow(self, user):
         if not self.is_following(user):
@@ -68,4 +77,5 @@ class Post(db.Model):
 
     def __repr__(self):
         return '<Post {}>'.format(self.body)
+
 

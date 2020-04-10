@@ -2,7 +2,7 @@ import unittest
 from app import app, db 
 from app.models import User 
 
-class UserTest(unittest.TestCase):
+class TestUser(unittest.TestCase):
     def setUp(self): #до всех тестов 
         #print("BEFORE TESTS")
         app.config['SQLALCHEMY_DATABASE_URI']  = 'sqlite://'
